@@ -60,14 +60,14 @@
 
 <script>
     export default {
-        name: "edit-book",
+        name: "EditBook",
         data () {
             return {
                 book: {}
             }
         },
         created () {
-            this.$http.get(`http://localhost:3000/book/${this.$route.params.id}`)
+            this.$http.get(`/api/book/${this.$route.params.id}`)
                 .then(response => {
                     this.book = response.data
                 })
@@ -78,7 +78,7 @@
         methods: {
             onSubmit (evt) {
                 evt.preventDefault()
-                this.$http.put(`http://localhost:3000/book/${this.$route.params.id}`, this.book)
+                this.$http.put(`/api/book/${this.$route.params.id}`, this.book)
                     .then(response => {
                         this.$router.push({
                             name: 'ShowBook',

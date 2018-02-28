@@ -29,7 +29,7 @@
 
 <script>
     export default {
-        name: "show-book",
+        name: "ShowBook",
         data () {
             return {
                 book: []

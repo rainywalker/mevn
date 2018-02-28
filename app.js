@@ -14,6 +14,12 @@ mongoose.connect('mongodb://jaelomin:ex7804!!@ds155130.mlab.com:55130/jaelomin-d
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
+app.use(require('connect-history-api-fallback')())
+
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs');
+
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));

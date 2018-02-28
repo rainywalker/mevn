@@ -21,7 +21,7 @@
 
 <script>
     export default {
-        name: "edit-book",
+        name: "BookList",
         data () {
             return {
                 fields: {

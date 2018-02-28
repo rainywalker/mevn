@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import BookList from '@/components/BookList'
 import ShowBook from '@/components/ShowBook'
 import CreateBook from '@/components/CreateBook'
